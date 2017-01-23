@@ -36,7 +36,7 @@ for df in dataframes.values():
 
 def removePunctuation(x):
     # Lowercasing all words
-    x = x.lower()
+#    x = x.lower()
     # Removing non ASCII chars
     x = re.sub(r'[^\x00-\x7f]',r' ',x)
     # Removing number
@@ -69,4 +69,4 @@ def removeStopwords(x):
 
 for name, df in dataframes.items():
     # Saving to file
-    df.to_csv("../input_raw/" +name + ".csv", index=False)
+    df.to_csv("../input_raw/" +name + "_not_lowercase.csv", index=False)
