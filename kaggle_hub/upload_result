@@ -1,0 +1,4 @@
+#rm x*
+gzip submissions.csv
+split --bytes=40M submissions.csv.gz
+rm submissions.csv.gz
